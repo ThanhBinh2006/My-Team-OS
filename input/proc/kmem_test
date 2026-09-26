@@ -1,0 +1,10 @@
+20 9
+alloc 100 1
+write 65 1 0
+kmem_cache_create 64 8 0
+kmem_cache_alloc 0 2
+kmalloc 128 3
+copy_from_user 1 3 0 1
+copy_to_user 3 1 0 1
+syscall 440 64 4
+syscall 441 4

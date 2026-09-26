@@ -1,0 +1,40 @@
+DEBUG: read proc name = 'sc2'
+Time slot   0
+ld_routine
+DEBUG: about to load 'input/proc/sc2'
+DEBUG: load() called with path = 'input/proc/sc2'
+Time slot   1
+	Loaded a process at input/proc/sc2, PID: 1 PRIO: 15
+Time slot   2
+	CPU 0: Dispatched process  1
+liballoc:178
+print_pgtbl:
+[vaddr: 0 | pgn: 0] -> PTE: 80000000 (ONLINE - FPN: 0)
+Time slot   3
+libwrite:502
+print_pgtbl:
+[vaddr: 0 | pgn: 0] -> PTE: 80000000 (ONLINE - FPN: 0)
+Time slot   4
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  1
+libwrite:502
+print_pgtbl:
+[vaddr: 0 | pgn: 0] -> PTE: 80000000 (ONLINE - FPN: 0)
+Time slot   5
+libwrite:502
+print_pgtbl:
+[vaddr: 0 | pgn: 0] -> PTE: 80000000 (ONLINE - FPN: 0)
+Time slot   6
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  1
+0-sys_listsyscall
+17-sys_memmap
+440-sys_kmalloc
+441-sys_kfree
+442-sys_kmem_cache_create
+443-sys_kmem_cache_alloc
+444-sys_copy_from_user
+445-sys_copy_to_user
+Time slot   7
+	CPU 0: Processed  1 has finished
+	CPU 0 stopped

@@ -1,0 +1,58 @@
+DEBUG: read proc name = 't1'
+DEBUG: read proc name = 't2'
+Time slot   0
+ld_routine
+DEBUG: about to load 'input/proc/t1'
+DEBUG: load() called with path = 'input/proc/t1'
+Time slot   1
+Time slot   2
+	Loaded a process at input/proc/t1, PID: 1 PRIO: 15
+Time slot   3
+	CPU 0: Dispatched process  1
+liballoc:178
+DEBUG: about to load 'input/proc/t2'
+DEBUG: load() called with path = 'input/proc/t2'
+print_pgtbl:
+[vaddr: 0 | pgn: 0] -> PTE: 80000000 (ONLINE - FPN: 0)
+[vaddr: 4096 | pgn: 1] -> PTE: 80000001 (ONLINE - FPN: 1)
+	Loaded a process at input/proc/t2, PID: 2 PRIO: 15
+Time slot   4
+libwrite:502
+print_pgtbl:
+[vaddr: 0 | pgn: 0] -> PTE: 80000000 (ONLINE - FPN: 0)
+[vaddr: 4096 | pgn: 1] -> PTE: 80000001 (ONLINE - FPN: 1)
+Time slot   5
+	CPU 0: Put process  1 to run queue
+	CPU 0: Dispatched process  2
+liballoc:178
+print_pgtbl:
+[vaddr: 0 | pgn: 0] -> PTE: 80000002 (ONLINE - FPN: 2)
+[vaddr: 4096 | pgn: 1] -> PTE: 80000003 (ONLINE - FPN: 3)
+Time slot   6
+libwrite:502
+print_pgtbl:
+[vaddr: 0 | pgn: 0] -> PTE: 80000002 (ONLINE - FPN: 2)
+[vaddr: 4096 | pgn: 1] -> PTE: 80000003 (ONLINE - FPN: 3)
+Time slot   7
+	CPU 0: Put process  2 to run queue
+	CPU 0: Dispatched process  1
+libread:426
+print_pgtbl:
+[vaddr: 0 | pgn: 0] -> PTE: 80000000 (ONLINE - FPN: 0)
+[vaddr: 4096 | pgn: 1] -> PTE: 80000001 (ONLINE - FPN: 1)
+Time slot   8
+libfree:218
+print_pgtbl:
+Time slot   9
+	CPU 0: Processed  1 has finished
+	CPU 0: Dispatched process  2
+libread:426
+print_pgtbl:
+[vaddr: 0 | pgn: 0] -> PTE: 80000002 (ONLINE - FPN: 2)
+[vaddr: 4096 | pgn: 1] -> PTE: 80000003 (ONLINE - FPN: 3)
+Time slot  10
+libfree:218
+print_pgtbl:
+Time slot  11
+	CPU 0: Processed  2 has finished
+	CPU 0 stopped
