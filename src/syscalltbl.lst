@@ -1,0 +1,8 @@
+__SYSCALL(0, sys_listsyscall)
+__SYSCALL(17, sys_memmap)
+__SYSCALL(440, sys_kmalloc)
+__SYSCALL(441, sys_kfree)
+__SYSCALL(442, sys_kmem_cache_create)
+__SYSCALL(443, sys_kmem_cache_alloc)
+__SYSCALL(444, sys_copy_from_user)
+__SYSCALL(445, sys_copy_to_user)
